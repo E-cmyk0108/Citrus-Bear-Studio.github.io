@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles.css" rel="stylesheet">
+    <title>Tabs</title>
+  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+    
+    <style>
+        /* 基本樣式 */
+        .tab-content > div {
+            display: none;
+        }
+
+        .tab-content > .active {
+            display: block;
+        }
+
+        .tabs-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-tab {
+            margin-left: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <!-- 頁籤區域 -->
+    <ul class="tabs">
+        <li class="logo">
+            <img src="images/熊柑所logo.png" alt="Logo" class="logo-img">
+        </li>
+        <div class="tabs-container">
+            <li data-tab-target="#home" class="tab active">Home</li>
+            <li data-tab-target="#about" class="tab">About</li>
+            <li data-tab-target="#textile" class="tab">Textile</li>
+            <li data-tab-target="#pattern" class="tab">Pattern</li>
+            <li data-tab-target="#blog" class="tab">Blog</li>
+        </div>
+        <li data-tab-target="#contact" class="contact-tab">Contact</li>
+    </ul>
+
+    <!-- 內容區域 -->
+    <div class="tab-content">
+        <!-- Home 頁面內容 -->
+        <div id="home" data-tab-content class="active">
+            <div class="content-home">
+                <div class="home-text">
+                    <h1 style="font-family: 'Prompt', sans-serif; font-size: 20px;">Citrus Bear Studio</h1>
+                    <h2 style="font-family: 'Prompt', sans-serif; font-size: 50px;">熊柑所</h2>
+                    <h3 style="font-family: 'Prompt', sans-serif; font-size: 32px;">Siōng kam</h3>
+                </div>
+               
+                <button class="home-button" style="border: 1px solid white; border-radius: 20px; font-family: 'Prompt', regular; font-size: 24px;">
+                    Let’s beyond innovation
+                </button>
+                
+            </div>
+        </div>
+
+        <!-- 其他頁面內容 -->
+        <div id="about" data-tab-content>
+            <div class="about-container">
+                <div class="about-text">
+                    <h1 style="font-family: 'Prompt', sans-serif; font-size: 32px;">Hsien, Textile Artist, 織品創作者</h1>
+                    <p style="font-family: 'Prompt', sans-serif; font-size: 14px;">Hsien began her textile art journey during her university years, believing that the interweaving of threads could depict the way people, happenings, and things exist in the world. Taking weaving as an example, the warp threads represent the timeline surrounding us, while the weft threads symbolize our daily lives. In everyday life, we constantly pass through different experiences, only becoming visible when touched by light. As events unfold, emotions are formed, and these emotions are eventually woven into memories. Hsien's work seeks to preserve these memories, creating "containers of memory" that allow us to revisit the past and remind ourselves of moments of warmth and joy. In addition to her textile creations, she also explores print design, enabling these emotions to be conveyed through everyday objects, constantly reminding you that you are loved and cherished.</p>
+                    <p style="font-family: 'Prompt', sans-serif; font-size: 14px;">熊柑(Hsien)從大學時期便開始進行織品藝術創作，她相信，線與線之間的交錯能描繪出人、事、物在這個世界上的生存模樣。以梭織為例，經線如同環繞在我們周圍的時間軸，而每一天的生活則是緯線。在日常生活中，我們不斷穿越不同的事物，只有遇到光線時才顯現形態，隨著經歷事件產生情緒，這些情緒最終編織成回憶。熊柑致力於將這些記憶保留下來，製作出「記憶的容器」，讓我們能隨時回到過去，提醒自己那些溫暖與快樂的時刻。除了織品創作外，她也涉足印花設計，讓這些情感能夠透過日常物件傳遞到每個人的身邊，時刻提醒你，你是被愛著和被呵護的。</p>
+                </div>
+               
+                <div class="about-image">
+                    <img src="images/Aboutme熊柑01.jpg" alt="Hsien,textile artist">
+                   
+                </div>
+            </div>
+        </div>
+        <div id="textile" data-tab-content>
+            <div class="textile-container">
+                <div class="textile-text">
+                <h1 style="font-family: 'Prompt', sans-serif; font-size: 32px;">Project _ Symbiosis / 共生</h1>
+                <p style="font-family: 'Prompt', sans-serif; font-size: 14px;">Our body remembers the scars, even when our minds forget the memories. This project draws inspiration from the body, highlighting how our experiences are stored in our physical form, even if we can't consciously recall them. Using medical anatomy illustrations as a reference, I employ various weaves and colors to mimic the flow of lymph, the movement of blood, and the space created by muscles. I hope the work resonates emotionally with the audience, encouraging them to reflect on their past experiences and embrace the sensations of the present moment through their body.</p>
+                <p style="font-family: 'Prompt', sans-serif; font-size: 14px;">身體是情緒的載體，會記住所有緊繃、開心或悲傷的狀態。然而，腦海中的記憶與身體的記憶不盡相同，最終記憶會以我們想像中的形式存在。這個計畫作品以身體為靈感，強調我們所經歷的事情會被身體記住，即便腦海中無法再現那段記憶。作品參考醫學解剖書中的身體結構圖，運用不同織紋來模擬淋巴的走向、血液與肌肉的空間關係。希望觀者能與作品產生情感共鳴，透過自己的身體去感受曾經走過的每一步，並接受當下最真實的情感。</p>
+                <p style="font-family: 'Prompt', sans-serif; font-size: 14px;">Material:Cotton, Linen, Plastic, Acrylic, Polyester, Wool Year: 2020-2021</p>
+            </div>
+                <div class="textile-photo-gallery">
+                  
+                    <div class="photo">
+                        <img src="images/textile01/all-1.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="images/textile01/all-3.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="images/textile01/all-4.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="images/textile01/bk-1.jpg" alt="">
+                        </div>
+              
+                 
+                 <div class="photo">
+                            <img src="images/textile01/muscle-1.jpg" alt="">
+                        </div>
+                 
+                    <div class="photo">
+                        <img src="images/textile01/bv-1.jpg" alt="">
+                        </div>
+                            <div class="photo">
+                                <img src="images/textile01/bv-3.jpg" alt="">
+                                </div>
+                             <div class="photo">
+                                        <img src="images/textile01/muscle-2.jpg" alt="">
+                                    </div>
+                            <div class="photo">
+                                        <img src="images/textile01/180-1.jpg" alt="">
+                                    </div>
+                            <div class="photo">
+                                        <img src="images/textile01/180-2.jpg" alt="">
+                                    </div>
+                                <div class="photo">
+                                        <img src="images/textile01/180-3.jpg" alt="">
+                                    </div>
+                         
+                    </div>
+</div>    
+        <div class="textile-container2">
+                    <div class="text-section2">
+                        <h1 style="font-family: 'Prompt', sans-serif; font-size: 32px;">Project _ The Shape of Cognition / 認知的形狀</h1>
+                        <p style="font-family: 'Prompt', sans-serif; font-size: 14px;">Human thoughts are fluid and diverse, and in a rapidly changing environment, we constantly accept, adapt to, and internalize new values. While cognitive dissonance can foster growth, it can also cause friction or numbness. Yet, I believe that every collision has its own significance, because in that moment, it represents everything you are capable of giving. Each thought is like a small flower, deserving of care and appreciation. I hope my work provides you with a space to find a moment of respite in the process of thinking, and to wander freely within the realm of ideas.</p>
+                        <p style="font-family: 'Prompt', sans-serif; font-size: 14px;">人類思想充滿流動性與多樣性，我們在快速變遷的環境中不斷接受、適應並內化新的價值觀。雖然認知失調既可能促進成長，也可能引發摩擦或導致麻木，但我認為每一次碰撞都有其意義，因為在那一刻，那是你能付出的全部。每一個想法如同一朵小花，值得被珍視與呵護。希望我的作品能為你提供一個空間，讓你在思考的過程中找到片刻喘息，並在思想的自由中徜徉。</p> 
+                        <p style="font-family: 'Prompt', sans-serif; font-size: 14px;">Material : Cotton, Polyester, oil beads, fishing line Year: 2024</p>
+
+                    </div>
+                    <div class="textile-photo-gallery2">
+                        
+                    <div class="photo2">
+                            <img src="images/textile02/02.jpg" alt="">
+                        </div>
+                        <div class="photo2">
+                            <img src="images/textile02/03.jpg" alt="">
+                        </div>
+                        <div class="photo2">
+                            <img src="images/textile02/04.jpg" alt="">
+                        </div>            
+                        <div class="photo2">
+                            <img src="images/textile02/05.jpg" alt="">
+                        </div>    
+            </div>
+            <div class="textile-photo-container2">
+            </div>    
+        </div>
+        </div>
+
+        <div id="pattern" data-tab-content>
+            <div class="pattern-container">
+                <div class="pattern-text-section">
+                    <h1 style="font-family: 'Prompt', sans-serif; font-size: 32px;">Pattern Design / 印花設計</h1>
+                    <p style="font-family: 'Prompt', sans-serif; font-size: 14px;">Hsien specializes in using floral, plant-inspired, and abstract patterns, bringing them to life through vibrant colors and rich textures. Whether hand-drawn or digitally created, each design transforms into a lively story through print. With a background in textile design, Hsien is well-versed in different material applications and printing techniques, such as screen printing and digital printing. This expertise ensures that each item and print is presented in the best possible way, offering both artistic flair and practicality.</p>
+                    <p style="font-family: 'Prompt', sans-serif; font-size: 14px;">Hsien 以花卉、植物和抽象形狀為主要設計元素，將這些圖案以鮮明的色彩和豐富的材質質感呈現出來。無論是手繪還是數位設計，Hsien 都能巧妙地將印花變成一個個充滿生命力的故事。在織品設計的背景下，Hsien 精通各種材質的應用，並擅長運用網版印刷與數位印花技術，為您提供獨特且精緻的圖案解決方案，讓每一件作品都充滿藝術感與實用性。</p>
+                </div>
+                <div class="pattern-photo-gallery">
+                    <div class="pattern-photo">
+                        <img src="images/pattern mockup/1.png" alt="">
+                    </div>  
+                    <div class="pattern-photo">
+                        <img src="images/pattern mockup/10.png" alt="">
+                    </div>     
+                    <div class="pattern-photo">
+                        <img src="images/pattern mockup/3.png" alt="">
+                    </div>  
+                    <div class="pattern-photo">
+                        <img src="images/pattern mockup/4.png" alt="">
+                    </div>
+                    <div class="pattern-photo">
+                            <img src="images/pattern mockup/5.png" alt="">
+                        </div>
+                    <div class="pattern-photo">
+                            <img src="images/pattern mockup/6.png" alt="">
+                        </div>
+                     <div class="pattern-photo">
+                            <img src="images/pattern mockup/7.png" alt="">
+                        </div>
+                    <div class="pattern-photo">
+                            <img src="images/pattern mockup/8.png" alt="">
+                        </div>
+                    <div class="pattern-photo">
+                            <img src="images/pattern mockup/9.png" alt="">
+                        </div>
+                    <div class="pattern-photo">
+                            <img src="images/pattern mockup/10.png" alt="">
+                        </div>
+                    <div class="pattern-photo">
+                            <img src="images/pattern mockup/13.png" alt="">
+                        </div>
+                    <div class="pattern-photo">
+                            <img src="images/pattern mockup/14.png" alt="">
+                        </div>
+                    <div class="pattern-photo">
+                            <img src="images/pattern mockup/15.png" alt="">
+                        </div>
+                    <div class="pattern-photo">
+                            <img src="images/pattern mockup/16.png" alt="">
+                        </div>                   
+                    <div class="pattern-photo">
+                            <img src="images/pattern mockup/17.png" alt="">
+                        </div> 
+                    </div>  
+                </div>
+            </div>
+        </div>   
+        <div id="blog" data-tab-content>
+            <div class="content-blog">
+                <div class="blog-text">
+                    <h3 style="font-family: 'Prompt', sans-serif; font-size: 32px;">
+                        to be continued...</h3>
+</div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact 頁面內容 -->
+<div id="contact" data-tab-content>
+    <div class="contact-container">
+        <div class="contact-text">
+            <p style="font-family: 'Prompt', sans-serif; font-size: 14px;">For all press inquiries, commissions, and collaboration requests, please contact:</p>
+                <p>email: elvachangofficial@gmail.com
+                    instagram: @iscrecord0.0</p>
+        </div>
+        <div class="content-contact-form">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfbtEQWetTK5YwunMAY5k-698NWVFZVEim5sBjWuilkl5rSeA/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+    </div>
+    </div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <a href="#contact">Contact</a>
+                <a href="https://www.instagram.com/iscrecord0.0?igsh=MWQ2ZHp2bjJ3MDByNQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+            <div class="footer-right">
+                <p>Copyright 2024. Siōng kam Studio. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+         <script src="main.js"></script>
+    </body>
+</html>

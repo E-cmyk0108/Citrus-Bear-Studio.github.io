@@ -1,0 +1,528 @@
+/* 引入字體 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* 全局字體設置 */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    background: linear-gradient(to top, #D84800 0% ,#E06D33 30%, #FFFFFF 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tab 和內容區域的字體設置 */
+.tab-content h1, .tab-content p, .tab {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+/* Tabs 容器樣式 */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 2% 5% 0;
+    list-style-type: none;
+}
+
+/* Logo 左側固定 */
+.logo {
+    margin-right: 20px;
+    flex: 0 0 auto;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+/* Tabs 中間內容 */
+.tabs-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.tab, .contact-tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 26px;
+    background-color: transparent;
+    position: relative;
+    transition: background-color 0.3s, filter 0.3s;
+}
+
+.tab::before, .contact-tab::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 26px;
+    background-color: transparent;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.tab:hover::before, .contact-tab:hover::before {
+    background-color: rgba(217, 74, 3, 0.5);
+}
+
+.tab.active, .contact-tab.active {
+    color: white;
+}
+
+.tab.active::before, .contact-tab.active::before {
+    background-color: rgba(217, 74, 3, 1);
+}
+
+/* Tab 內容區域 */
+.tab-content {
+    margin: 20px 5%;
+    padding: 20px;
+    border-radius: 26px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Home 內容樣式 */
+#home {
+}
+
+.content-home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-text h1 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0 0 5px 0; /* 使 h1 與 h2 之間有 30px 間距 */
+}
+
+.home-text h2 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0 0 -10px 0; /* 使 h1 與 h2 之間有 30px 間距 */}
+
+.home-text h3 {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    margin: -10px;
+}
+
+.home-button {
+    margin-top: 20px;
+    padding: 8px 60px !important;
+    font-size: 18px !important;
+    font-weight: 100;
+    color: #fff;
+    background: none;
+    border: 1px solid #FFFFFF !important;
+    border-radius: 10px !important;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.home-button:hover {
+    background-color: #d84800a7;
+    color: #fff;
+}
+/* About 內容樣式 */
+#about {
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* 確保文字和圖片從容器的上方對齊 */
+    justify-content: space-between;
+    max-width: 6000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFFFFF,1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 更輕的陰影 */
+
+}
+
+.about-text {
+    width: 50%;
+    padding: 20px;
+}
+
+.about-text h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #333; /* 確保顏色與背景對比清晰 */
+    margin-bottom: 5px; /* 調整 h1 與 p 之間的距離 */
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333; /* 確保顏色與背景對比清晰 */
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif; /* 統一字體 */
+    font-weight: 400; /* 統一字重 */
+}
+
+.about-image {
+    width: 50%;
+    padding: 50px;
+    margin: right -20;
+    display: flex;
+    justify-content: flex-start; /* 將內容推到容器的左側 */
+  
+}
+.about-image img {
+    width: 60%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 更輕的陰影 */
+    transform: translateX(120px);
+
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-text, .about-image {
+        width: 100%;
+    }
+}
+/* Textile 內容樣式 */
+/* 將頁面分成左右兩部分 */
+.textile-container {
+    display: flex;
+    width: 100%;
+    height: 100%; /* 使整個頁面占滿視窗 */
+}
+
+/* 左邊文字區域，占40% */
+.textile-text {
+    flex: 0 0 30%;
+    padding: 20px;
+    background-color: #FFFFFF,1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 更輕的陰影 */
+    box-sizing: border-box; /* 確保 padding 不會影響寬度 */
+    overflow-y: auto; /* 若內容過長則出現滾動條 */
+    
+}
+.textile-text h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #333; /* 確保顏色與背景對比清晰 */
+    margin-bottom: 5px; /* 調整 h1 與 p 之間的距離 */
+}
+
+.textile-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333; /* 確保顏色與背景對比清晰 */
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif; /* 統一字體 */
+    font-weight: 400; /* 統一字重 */
+}
+
+/* 右邊圖片瀑布流區域，占60% */
+.textile-photo-gallery {
+    flex: 1; /* 佔據剩餘的60%空間 */
+    column-count: 3; /* 3列瀑布流 */
+    column-gap: 20px; /* 列間距 */
+    padding: 20px;
+    background-color: #FFFFFF,1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 更輕的陰影 */
+    overflow-y: auto; /* 若內容過長則出現滾動條 */
+}
+
+.photo {
+    margin-bottom: 20px; /* 圖片之間的間距 */
+    break-inside: avoid; /* 避免圖片被切分 */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.photo:hover {
+    transform: scale(1.05); /* 圖片懸停效果 */
+}
+
+.textile-container2 {
+    display: flex;
+    width: 100%;
+    height: 100%; /* 使整個頁面占滿視窗 */
+}
+
+/* 左邊文字區域，占40% */
+.text-section2 {
+    flex: 0 0 40%;
+    padding: 20px;
+    background-color: #FFFFFF,1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 更輕的陰影 */
+    box-sizing: border-box; /* 確保 padding 不會影響寬度 */
+    overflow-y: auto; /* 若內容過長則出現滾動條 */
+}
+.text-section2 h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #333; /* 確保顏色與背景對比清晰 */
+    margin-bottom: 5px; /* 調整 h1 與 p 之間的距離 */
+}
+
+.text-section2 p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333; /* 確保顏色與背景對比清晰 */
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif; /* 統一字體 */
+    font-weight: 400; /* 統一字重 */
+}
+/* 右邊圖片瀑布流區域，占60% */
+.textile-photo-gallery2 {
+    flex: 1; /* 佔據剩餘的60%空間 */
+    column-count: 2; /* 3列瀑布流 */
+    column-gap: 20px; /* 列間距 */
+    padding: 20px;
+    background-color: #FFFFFF,1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 更輕的陰影 */
+    overflow-y: auto; /* 若內容過長則出現滾動條 */
+}
+
+.photo2 {
+    margin-bottom: 20px; /* 圖片之間的間距 */
+    break-inside: avoid; /* 避免圖片被切分 */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.photo2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.photo2:hover {
+    transform: scale(1.05); /* 圖片懸停效果 */
+}
+
+@media(max-width:768px){
+    .textile-photo-gallery{
+        flex-direction: column;
+    }
+}
+
+/* Pattern 內容樣式 */
+/* 將頁面分成左右兩部分 */
+.pattern-container {
+    display: flex;
+    width: 100%;
+    height: 100%; /* 使整個頁面占滿視窗 */
+}
+
+/* 左邊文字區域，占40% */
+.pattern-text-section {
+    flex: 0 0 30%;
+    padding: 20px;
+    background-color: #FFFFFF,1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 更輕的陰影 */
+    box-sizing: border-box; /* 確保 padding 不會影響寬度 */
+    overflow-y: auto; /* 若內容過長則出現滾動條 */
+}
+.pattern-text-section h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #333; /* 確保顏色與背景對比清晰 */
+    margin-bottom: 5px; /* 調整 h1 與 p 之間的距離 */
+}
+
+.pattern-text-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333; /* 確保顏色與背景對比清晰 */
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif; /* 統一字體 */
+    font-weight: 400; /* 統一字重 */
+}
+
+
+/* 右邊圖片瀑布流區域，占60% */
+.pattern-photo-gallery {
+    flex: 1; /* 佔據剩餘的60%空間 */
+    column-count: 3; /* 3列瀑布流 */
+    column-gap: 20px; /* 列間距 */
+    padding: 20px;
+    background-color: #FFFFFF,1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 更輕的陰影 */
+    overflow-y: auto; /* 若內容過長則出現滾動條 */
+}
+
+.pattern-photo {
+    margin-bottom: 30px; /* 圖片之間的間距 */
+    break-inside: avoid; /* 避免圖片被切分 */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.pattern-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.pattern-photo:hover {
+    transform: scale(1.05); /* 圖片懸停效果 */
+}
+/* Blog 內容樣式 */
+#blog{
+}
+
+.content-blog {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.blog-text h3 {
+    color: #fff;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    margin: -10px;
+}
+/* Contact 內容樣式 */
+/* Ｃontact將頁面分成左右兩部分 */
+#contact{
+    
+}
+.contact-container {
+    display: flex;
+    margin: 20px 5%;
+    padding: 20px;
+    height: 100%; /* 使整個頁面占滿視窗 */
+    
+}
+
+/* 左邊文字區域，占40% */
+.contact-text {
+    flex: 0 0 30%;
+    padding: 20px;
+    background-color: #FFFFFF,1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 更輕的陰影 */
+    box-sizing: border-box; /* 確保 padding 不會影響寬度 */
+    overflow-y: auto; /* 若內容過長則出現滾動條 */
+}
+
+.contact-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333; /* 確保顏色與背景對比清晰 */
+    margin-bottom: 15px;
+    font-family: 'Prompt', sans-serif; /* 統一字體 */
+    font-weight: 400; /* 統一字重 */
+}
+
+
+/* 右邊圖片瀑布流區域，占60% */
+
+.content-contact-form {
+    width: 80%;
+    padding: 10px;
+    background-color: #FFFFFF,1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 更輕的陰影 */
+    box-sizing: border-box; /* 確保 padding 不會影響寬度 */
+    overflow-y: auto; /* 若內容過長則出現滾動條 */
+}
+
+iframe {
+    height: 800px;
+    border: none;
+}
+
+
+/* Footer 樣式 */
+footer {
+    margin-top: auto;
+    padding: 10px 5%;
+    background: transparent;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer-left a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-left a:hover {
+    color: #fff;
+}
+
+.footer-right p {
+    margin: 0;
+}
+
