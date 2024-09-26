@@ -4,9 +4,9 @@
 /* 全局字體設置 */
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
     font-weight: 500;
-    background: linear-gradient(to top, #D84800 0% ,#E06D33 30%, #FFFFFF 100%);
+    background: linear-gradient(to top, #D84800 0%, #E06D33 30%, #FFFFFF 100%);
     min-height: 100vh;
     margin: 0;
     display: flex;
@@ -15,9 +15,7 @@ body {
 
 /* Tab 和內容區域的字體設置 */
 .tab-content h1, .tab-content p, .tab {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
+    font: inherit; /* 繼承全局字體設置 */
 }
 
 [data-tab-content] {
@@ -97,6 +95,23 @@ body {
     border-radius: 26px;
     position: relative;
     z-index: 1;
+}
+
+/* 響應式設置 */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem; /* 小螢幕字體 */
+    }
+
+    .tabs {
+        flex-direction: column; /* 小螢幕上改為垂直排列 */
+        align-items: flex-start;
+    }
+
+    .tab-content {
+        margin: 10px 2%;
+        padding: 10px;
+    }
 }
 
 /* Home 內容樣式 */
