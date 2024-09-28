@@ -49,6 +49,26 @@
     </style>
 </head>
 <body>
+  <div id="mobile-warning">
+    <div class="message">
+      <p>此頁面僅限於 iPad 或筆電查看。</p>
+      <p>請使用平板或桌面設備進行訪問！</p>
+      <button onclick="closeWarning()">我知道了</button>
+    </div>
+  </div>
+
+  <script>
+    // 檢測是否是手機載具
+    if (window.innerWidth <= 768) {
+      // 顯示警告訊息彈窗
+      document.getElementById("mobile-warning").style.display = "flex";
+    }
+
+    // 關閉警告訊息的函式
+    function closeWarning() {
+      document.getElementById("mobile-warning").style.display = "none";
+    }
+  </script>
     <!-- 頁籤區域 -->
     <ul class="tabs">
         <li class="logo">
